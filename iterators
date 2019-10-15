@@ -1,0 +1,113 @@
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// function with for loop
+function listFruit(){
+  for (i=0; i<fruits.length; i++){
+    console.log('I want to eat a ' + fruits[i]);
+  }
+}
+listFruit();
+
+
+
+//arrow syntax & forEach()
+fruits.forEach(fruitItem => console.log(fruitItem));
+
+//defining function & forEach()
+function printFruit(listFruit){
+  console.log('I want to eat a ' + listFruit);
+}
+fruits.forEach(printFruit);
+
+
+
+// new array with .map
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog']
+ // Create the secretMessage array below using map
+const secretMessage = animals.map((newArray)=>newArray[0]);
+//print secret message
+console.log(secretMessage.join(''));
+
+
+
+//array of numbers
+const bigNumbers = [100, 200, 300, 400, 500];
+
+// Create the smallNumbers1 array below
+const smallNumbers1 = bigNumbers.map(newNumbers=>{
+  return newNumbers / 100;
+});
+//print numbers
+console.log(smallNumbers1.join(''));
+
+
+
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+// Call .filter() on randomNumbers less than 250
+const smallNumbers = randomNumbers.filter(newNumbers=>{
+  return newNumbers<250;
+}).join();
+console.log(smallNumbers);
+
+const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+
+
+// Call .filter() on favoriteWords more than 7 letters
+const longFavoriteWords = favoriteWords.filter(newWords=>{
+  return newWords.length>7;
+}).join();
+console.log(longFavoriteWords);
+
+
+
+
+const animals2 = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+//find element with value of elephant
+const foundAnimal = animals2.findIndex(dumbo=>{
+  return dumbo['hippo'];
+});
+console.log(foundAnimal);
+
+//find element with letter starting with s
+const startsWithS = animals2.findIndex(letter=>{
+  return letter.startsWith('s')
+});
+console.log(startsWithS);
+
+
+//learning about accumulator & constructors
+const newNumbers = [1, 3, 5, 7];
+
+
+const newSum = newNumbers.reduce((accumulator, currentValue) => {
+  console.log('The value of accumulator: ', accumulator);
+  console.log('The value of currentValue: ', currentValue);
+  return accumulator + currentValue;
+  //accumulator=1, constructor=3....accumulator=4. constructor=5.....accumulator=9, constructor=7
+});
+console.log(newSum);
+
+
+
+
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+
+//using the .some returns a boolean, see words less than 6
+console.log(words.some( (word) => {
+  return word.length < 6;
+}));
+
+// Use .filter to find words larger than 5, will print
+const interestingWords = words.filter(newWord=>{
+  return newWord.length > 5;
+}
+);
+
+
+// to check if every element has more than 5 characters, boolean. 
+console.log(interestingWords.every((word) => { 
+  return word.length > 5;
+} ));
