@@ -1,0 +1,75 @@
+let secretMessage = ['Learning', 'is', 'not', 'about', 'what', 'you', 'get', 'easily', 'the', 'first', 'time,', 'it', 'is', 'about', 'what', 'you', 'can', 'figure', 'out.', '-2015,', 'Chris', 'Pine,', 'Learn', 'JavaScript'];
+//print secret message as a sentence
+console.log(secretMessage.join())
+
+
+//check count of words in array
+console.log('\n amount of words in array: '+secretMessage.length);
+
+//remove the last word from the array
+var last = secretMessage.pop();
+
+//print last word from array
+console.log('\n last word removed from array: '+last);
+
+//verify removal by counting words in array again
+console.log('\n amount of words in array: '+secretMessage.length);
+
+//add two separate strings to array
+const word1 = 'hello, ';
+const word2 = 'goodbye';
+secretMessage.push(word1 + word2);
+console.log('\n merged string: ' + secretMessage);
+
+//merge a new array to existing array
+var newArray = ['poop','fart'];
+var newLength = secretMessage.concat(newArray);
+console.log('\n merged array: '+newLength);
+
+//remove item using index from array, and add new word in its place
+var removeWord = secretMessage.indexOf('easily');
+secretMessage[removeWord] = 'REMOVED';
+console.log('\n move & replace word: '+secretMessage);
+
+//remove first string
+secretMessage.shift();
+console.log('\n removed first string: '+secretMessage);
+
+//add to beginning or array
+secretMessage.unshift('SHIT BARF');
+console.log('\n added to first string: '+secretMessage);
+
+//remove multiple words (starting position, and number of words to remove after, 'word to replace')
+var removeWord = secretMessage.splice(5,4, 'love' );
+console.log('\n replace multiple words: '+secretMessage);
+
+
+
+
+
+
+
+
+
+//whale talk loops with arrays
+let input='poopieassbutthole';
+let vowels=['a','e','i','o','u'];
+let resultArray=[];
+
+for (let i=0; i<input.length; i++){
+  for (let j=0; j<vowels.length; j++){
+    if (input[i]===vowels[j]){
+    resultArray.push(input[i]);    
+    }
+  }
+  if (input[i]===vowels[1]){
+    resultArray.push(input[i]);
+  }
+  if (input[i]===vowels[4]){
+    resultArray.push(input[i]);
+  }
+};
+
+console.log('This is how whales say poopieassbutthole: ' + resultArray.join('').toUpperCase());
+
+
