@@ -1,0 +1,46 @@
+/*
+//filter unnecessary words from storyWords & save in an array called betterWords
+for (let i=0; i< storyWords.length; i++  ){
+  for (let j=0; j< unnecessaryWords.length; j++  ){
+    if (storyWords[i] === unnecessaryWords[j]){
+      betterWords.push(storyWords[i]);
+      storyWords.splice(i,1);
+    }
+  }
+}
+console.log('\n amount of unnecessary words used: '+ betterWords.length);
+console.log('words removed: '+ betterWords);
+console.log('list with words removed \n' + storyWords);
+
+
+
+
+
+//removing overusedWords words from storyWords
+for (let i=0; i< storyWords.length; i++  ){
+  for (let j=0; j< overusedWords.length; j++  ){
+    if (storyWords[i] === overusedWords[j]){
+      usedWords.push(storyWords[i]);
+      storyWords.splice(i,1);
+    }
+  }
+}
+console.log('\n amount of unnecessary words used: '+ usedWords.length);
+console.log('words removed: '+ usedWords);
+console.log('list with words removed \n' + storyWords);
+
+
+
+///counting sentences words from storyWords
+puncts = ['.', '!'];
+let punctCount = [];
+for (let i=0; i< storyWords.length; i++  ){
+  for (let j=0; j< puncts.length; j++  ){
+    if (storyWords[i] === puncts[j]){
+      storyWords.splice(i,1);
+      punctCount = storyWords;
+    }
+  }
+}
+console.log(punctCount.length);
+*/
