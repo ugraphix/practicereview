@@ -1,0 +1,19 @@
+//defining an object
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+// Write your code below
+
+spaceship.color = 'glorious gold';
+
+//creates new property
+spaceship.numEngines = 9;
+
+//deletes property
+delete spaceship['Secret Mission'];
+
+console.log(spaceship);
