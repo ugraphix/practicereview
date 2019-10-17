@@ -17,3 +17,21 @@ spaceship.numEngines = 9;
 delete spaceship['Secret Mission'];
 
 console.log(spaceship);
+
+//to be saved in the object method 'retreat'
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+
+// creating methods in an object
+const alienShip={
+  //add method
+  retreat(){
+    console.log(retreatMessage)
+  },
+  //add another method
+  takeOff(){
+    console.log('Spim... Borp... Glix... Blastoff!')
+  }
+};
+//invoking object methods
+alienShip.retreat();
+alienShip.takeOff();
