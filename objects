@@ -35,3 +35,42 @@ const alienShip={
 //invoking object methods
 alienShip.retreat();
 alienShip.takeOff();
+
+
+
+
+
+let spaceship1 = {
+//Make at least one passenger object in the array that has at least one key-value pair on it
+ passengers : [{name: 'Space Dog'}], //passengers : [{name: 'Space Dog'}]
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032 
+  },
+  crew: {
+    captain: { 
+      name: 'Sandra', 
+      degree: 'Computer Engineering', 
+      encourageTeam() { console.log('We got this!') },
+     'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+  },
+  engine: {
+    model: "Nimbus2000"
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD"
+    },
+    backup: {
+      battery: "Lithium",
+      terabytes: 50
+    }
+  }
+}; 
+//Create a variable capFave and assign the captain‘s favorite food to it.
+let capFave = spaceship1.crew.captain['favorite foods'][0];
+
+//Create a variable firstPassenger and assign the first passenger as its value
+let firstPassenger = spaceship1.passengers[0];
