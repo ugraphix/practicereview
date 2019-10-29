@@ -5,61 +5,23 @@ let overusedWords = ['really', 'very', 'basically'];
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 
-
 //split story string into an array, rename to storyWords
 let storyWords = story.split(" ");
-console.log(storyWords);
-
-
-// get length of storyWords
-let storyWordLength = storyWords.length;
-console.log('storyWord length is: ' + storyWordLength +'\n');
+console.log(storyWords.length);
 
 
 
-//removing words from storyWords
-function wordLoops(a,b,c, d) {
- for (let i=0; i< a.length; i++  ){
-    for (let j=0; j< b.length; j++  ){
-      if (a[i] === b[j]){
-        c.push(storyWords[i]);
-        a.splice(i,1);
-      }
+//removing overusedWords words from storyWords
+let betterWords = [];
+for (let i=0; i< storyWords.length; i++  ){
+  for (let j=0; j< overusedWords.length; j++  ){
+    if (storyWords[i] === overusedWords[j]){
+      storyWords.splice(i,1);
+      betterWords = storyWords;
     }
   }
-console.log('\n amount of '+ d +' items used: '+ c.length);
-console.log('removed: '+ c);
-console.log('list with items removed \n' + a);
-  return c;
-
 }
-
-//count unnecessary words
-function unnecessary(){
-let betterWords = [];
-wordLoops(storyWords, unnecessaryWords, betterWords, 'unnecessary');
-}
-
-
-//count overused words
-function used(){
-let usedWords = [];
-wordLoops(storyWords, overusedWords, usedWords, 'overused');
- }
-
-
-//functio to count sentences in the story
-function countSentences(a, b){
-a = story.split('.').length-1;
-b = story.split('!').length-1;
-let final = a+b;
-console.log('\n there are' + final + ' sentences');
-}
+console.log(betterWords);
 
 
 
-
-
-unnecessary();
-used();
-countSentences(',', '!')  ;
